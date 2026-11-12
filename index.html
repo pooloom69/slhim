@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sola Lhim's Homepage</title>
+  <meta name="description" content="Sola Lhim, M.S. Computer Science student at Cal State Fullerton and research intern at UC Riverside. Trustworthy AI, formal verification, learning-based control.">
+  <style>
+    :root {
+      --text: #222;
+      --link: #2a7ae2;
+      --line: #e8e8e8;
+      --muted: #777;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--text);
+      font-family: "Helvetica Neue", Helvetica, Arial, "Apple SD Gothic Neo", sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page { display: flex; gap: 20px; max-width: 1080px; margin: 0 auto; padding: 16px 24px 0; }
+
+    /* ===== 왼쪽 사이드바 ===== */
+    aside { width: 180px; flex: none; }
+    .side-inner { position: sticky; top: 16px; }
+    .menu {
+      list-style: none; margin: 0; padding: 14px 0 14px 18px;
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    }
+    .menu li { margin: 3px 0; font-size: 14px; }
+    .menu li::before { content: "▶"; font-size: 11px; margin-right: 6px; color: var(--text); }
+    .photo {
+      display: block; width: 132px; height: 152px; margin: 18px auto 0;
+      object-fit: cover; border: 1px solid var(--line); background: #f2f2f2;
+    }
+    .photo.placeholder {
+      display: flex; align-items: center; justify-content: center;
+      color: #aaa; font-size: 34px; font-weight: 700;
+    }
+
+    /* ===== 본문 ===== */
+    main { flex: 1; min-width: 0; padding-bottom: 40px; }
+    h1 { font-size: 26px; margin: 0 0 10px; }
+    .meta { font-size: 13.5px; font-weight: 700; line-height: 1.45; margin: 0 0 4px; }
+    .meta a { font-weight: 700; }
+    h2 { font-size: 26px; margin: 26px 0 10px; }
+    h3 { font-size: 18px; margin: 16px 0 8px; }
+    p { margin: 0 0 10px; }
+
+    /* 연구 미리보기 칸 */
+    .works { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 8px 0 6px; }
+    .work a.label { display: block; font-size: 14px; margin-bottom: 4px; }
+    .work .thumb {
+      width: 100%; aspect-ratio: 16 / 10; object-fit: cover; display: block;
+      border: 1px solid var(--line); background: #f6f7f9;
+    }
+    .work .thumb.placeholder {
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      padding: 10px; color: #8a93a3; font-size: 12.5px;
+    }
+
+    /* 접는 섹션 */
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details > summary h2 { display: inline; }
+    details > summary::before { content: "▸"; font-size: 15px; margin-right: 4px; display: inline-block; transition: transform .15s; }
+    details[open] > summary::before { transform: rotate(90deg); }
+    details { margin: 26px 0 0; }
+    details > .body { margin-top: 10px; }
+
+    .edu p { margin: 0 0 14px; }
+
+    ul { margin: 0; padding-left: 22px; }
+    li { margin-bottom: 12px; }
+    .news li { margin-bottom: 6px; }
+    .pubs b.title { font-weight: 700; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 14px 24px; font-size: 13px; color: var(--text); }
+
+    /* ===== 모바일 ===== */
+    @media (max-width: 720px) {
+      .page { flex-direction: column; padding: 12px 16px 0; }
+      aside { width: 100%; }
+      .side-inner { position: static; display: flex; gap: 16px; align-items: center; }
+      .menu { flex: 1; border: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 14px; }
+      .photo { margin: 0; width: 96px; height: 110px; order: -1; }
+      .works { grid-template-columns: 1fr; }
+      .work .thumb.placeholder { aspect-ratio: 16 / 5; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ===== 왼쪽 ===== -->
+  <aside>
+    <div class="side-inner">
+      <ul class="menu">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="cv.pdf">CV</a></li>
+      </ul>
+      <!-- ✏️ 사진: profile.jpg 를 저장소에 올리면 표시됩니다 -->
+      <img class="photo" src="profile.jpg" alt="Sola Lhim"
+           onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'photo placeholder',textContent:'SL'}))">
+    </div>
+  </aside>
+
+  <!-- ===== 본문 ===== -->
+  <main id="top">
+    <h1>Sola Lhim</h1>
+    <div class="meta">
+      M.S. Student in Computer Science<br>
+      <a href="https://www.fullerton.edu/">California State University, Fullerton</a><br>
+      Research Intern, <a href="https://www.ucr.edu/">University of California, Riverside</a><br>
+      <!-- ✏️ LinkedIn, Google Scholar 주소를 넣어주세요 -->
+      <a href="https://github.com/pooloom69">[Github]</a>
+      <a href="https://www.linkedin.com/">[LinkedIn]</a>
+      <a href="cv.pdf">[CV]</a><br>
+      solalhim0609 at gmail.com
+    </div>
+
+    <h2>About me</h2>
+    <p>
+      I'm an M.S. student in Computer Science at <a href="https://www.fullerton.edu/">Cal State Fullerton</a>
+      and a research intern at <a href="https://www.ucr.edu/">UC Riverside</a>, where I work with
+      <a href="https://shizhouxing.github.io/">Zhouxing Shi</a> on the faithfulness of LLM-based autoformalization in Lean 4.
+      At CSUF, I work with Nabila Tanjeem on reinforcement learning for optical nanoparticle patterning, and previously
+      worked with Anand Panangadan on RGB–thermal multimodal sensing. Before computer science, I received my B.A. in
+      Law and Politics from Rikkyo University in Tokyo and worked as a Japanese–Korean translator.
+    </p>
+    <p><b>I am applying to Ph.D. programs for Fall 2027.</b></p>
+
+    <h3>See my work in action</h3>
+    <div class="works">
+      <!-- ✏️ 각 칸에 이미지를 넣으려면 thumb-1.png 같은 파일을 올리세요 -->
+      <div class="work">
+        <a class="label" href="#publications">Silent Repair in LLM Formalization</a>
+        <img class="thumb" src="thumb-1.png" alt="LLM formalization faithfulness"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb placeholder',textContent:'Lean 4 · LLM formalization'}))">
+      </div>
+      <div class="work">
+        <a class="label" href="#experience">RL for Nanoparticle Patterning</a>
+        <img class="thumb" src="thumb-2.png" alt="Closed-loop optical patterning system"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb placeholder',textContent:'Closed-loop optics · RL'}))">
+      </div>
+      <div class="work">
+        <a class="label" href="#publications">RGB–Thermal Fusion</a>
+        <img class="thumb" src="thumb-3.png" alt="RGB and thermal camera module"
+             onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb placeholder',textContent:'RGB + thermal IR sensing'}))">
+      </div>
+    </div>
+
+    <details>
+      <summary><h2>News</h2></summary>
+      <div class="body">
+        <ul class="news">
+          <li><b>2026</b>: First-author paper accepted at the IEEE Workshop on AI for HealthCare (AIHC 2026).</li>
+          <li><b>May 2026</b>: Joined UC Riverside as a research intern with Zhouxing Shi.</li>
+          <li><b>May 2026</b>: Started RL-driven nanoparticle patterning research with Nabila Tanjeem at CSUF.</li>
+          <li><b>Aug 2025</b>: Began the M.S. in Computer Science at Cal State Fullerton.</li>
+        </ul>
+      </div>
+    </details>
+
+    <h2 id="education">Education</h2>
+    <div class="edu">
+      <p><b>Aug. 2025 - Present</b>, Department of Computer Science, <b><i>California State University, Fullerton</i></b>, M.S. (GPA 4.0)</p>
+      <!-- <p><b>Jan. 2023 - May 2025</b>, Business &amp; Computer Information Systems, <b><i>Fullerton College</i></b>, Certificate</p> -->
+      <p><b>Apr. 2010 - Mar. 2015</b>, College of Law and Politics, <b><i>Rikkyo University</i></b>, Bachelor of Arts</p>
+    </div>
+
+    <details open id="publications">
+      <summary><h2>Publications</h2></summary>
+      <div class="body">
+        <ul class="pubs">
+          <li>
+            <!-- ✏️ 정확한 제목과 공저자로 바꿔주세요 -->
+            <b>Sola Lhim</b>, [Coauthors], Anand Panangadan.
+            <b class="title">[Paper title]: RGB–Thermal IR Fusion for Cooking-State Classification.</b>
+            IEEE Workshop on AI for HealthCare (AIHC), 2026.
+            <a href="#">[pdf]</a>
+          </li>
+          <li>
+            <b>Sola Lhim</b>, Zhouxing Shi.
+            <b class="title">Silent Repair: Kernel Acceptance Does Not Certify Faithfulness in LLM Autoformalization.</b>
+            In preparation.
+          </li>
+        </ul>
+      </div>
+    </details>
+
+    <h2 id="experience">Research Experience</h2>
+    <ul>
+      <li>
+        <b>Research Intern</b>, University of California, Riverside, with Zhouxing Shi (May 2026 - Present).
+        Found that LLM formalizers silently repair flawed informal proofs, so kernel acceptance says nothing about
+        faithfulness; built an edit-blind judge detecting 36.8–46.7% of these cases at a 3.5% false-positive rate.
+      </li>
+      <li>
+        <b>Research Assistant</b>, Cal State Fullerton, with Nabila Tanjeem (May 2026 - Present).
+        Built a real-time closed-loop control system linking software and optical hardware, and use RL to optimize
+        light-exposure patterns for target nanoscale particle formation.
+      </li>
+      <li>
+        <b>Research Assistant</b>, Cal State Fullerton, with Anand Panangadan (Aug. 2025 - May 2026).
+        Built a Raspberry Pi 5 module with RGB and thermal cameras and a fusion pipeline that raised cooking-state
+        classification accuracy from 65% to 78%.
+      </li>
+    </ul>
+
+    <details>
+      <summary><h2>Other Experience &amp; Projects</h2></summary>
+      <div class="body">
+        <ul>
+          <li><b>Data Engineer Intern</b>, Fullerton College (Feb. 2025 - Aug. 2025). Built a centralized Azure data platform with CI/CD and automated ETL, replacing manual reporting for 50+ staff.</li>
+          <li><b>US Citizenship Interview Prep App</b>. A React Native app on the App Store and Google Play with a FastAPI backend for voice-based interview simulation.</li>
+          <li><b>Japanese–Korean Translator</b> (Dec. 2018 - Aug. 2025). Documentaries and corporate research projects.</li>
+        </ul>
+      </div>
+    </details>
+  </main>
+</div>
+
+<footer>© Sola Lhim</footer>
+
+</body>
+</html>
