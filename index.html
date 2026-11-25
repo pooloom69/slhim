@@ -194,9 +194,6 @@
       <div class="authors"><b>Sola Lhim</b>, K. George, T. Nobari, A. Panangadan</div>
       <div class="venue"><i>IEEE International Conference on Information Reuse and Integration (IRI), Workshop on AI for Healthcare</i> (<b>AIHC</b>), 2026</div>
       <div class="plinks">
-        <a href="https://ieeexplore.ieee.org/abstract/document/11676623" target="_blank" rel="noopener noreferrer">paper</a> /
-        <!-- ✏️ FILE_ID 부분을 구글 드라이브 공유 링크로 교체 -->
-        <a href="https://drive.google.com/file/d/FILE_ID/view?usp=sharing" target="_blank" rel="noopener noreferrer">pdf</a>
       </div>
       <p class="desc">A Raspberry Pi 5 module with RGB and thermal cameras and a fusion pipeline that raised cooking-state classification accuracy from 65% to 78%.</p>
     </div>
@@ -271,18 +268,20 @@
     <li>
       <div class="head"><span class="org">University of California, Riverside</span><span class="when">May 2026 – Present</span></div>
       <div class="role">Research Intern, with Zhouxing Shi</div>
-      <p class="what">Found that LLM formalizers silently repair flawed informal proofs, so kernel acceptance says nothing about faithfulness; built an edit-blind judge detecting 36.8–46.7% of these cases at a 3.5% false-positive rate.</p>
+      <p class="what">With Professor Zhouxing Shi at UC Riverside, I study how large language models can pass strict Lean 4 kernel checks during proof autoformalization by altering flawed reasoning from the original informal proof. Because reasoning errors across proof steps are often too tangled for fixed error categories, I built a span-grounded judge that directly compares each informal step against its formal code to guide repairs. To test whether the judge measures true faithfulness rather than compilation success, I evaluated it using deliberately injected math errors so that a faithful system passes valid proofs while ensuring broken steps are rightly rejected by the kernel. Compared to baseline judges, this approach substantially improved reasoning preservation without letting models rewrite errors just to pass verification.</p>
     </li>
     <li>
       <div class="head"><span class="org">California State University, Fullerton</span><span class="when">May 2026 – Present</span></div>
       <div class="role">Research Assistant, with Nabila Tanjeem</div>
-      <p class="what">Built a real-time closed-loop control system linking software and optical hardware, and use RL to optimize light-exposure patterns for target nanoscale particle formation.</p>
+      <p class="what">In physical hardware, a learned controller only stays stable when its rewards and timing reflect the underlying physics. I built an autonomous colloidal self-assembly system that analyzes particle structures in real time and uses that feedback to guide the next action, linking digital micromirror device (DMD) light projection, microscope tracking, and a Q-learning controller in Python. Because continuous illumination causes extra particles to crowd into empty spaces and degrade the pattern, the controller must learn how to modulate light over time. By redesigning the reward function and action timing around actual physical clustering and relaxation dynamics, I improved structural fidelity by nearly 60% over continuous illumination, leading to an abstract submission to the 2027 APS Global Physics Summit. I am now extending this controller to transport assembled structures across the field of view without losing their shape.</p>   <li>
+      <div class="head"><span class="org">University of Southern California, Interaction Lab</span><span class="when">Jun 2026 – Sep 2026</span></div>
+      <div class="role">Research Assistant, supervised by Amy O'Connell (PI: Maja Matarić)</div>
+      <p class="what">At the USC Interaction Lab, I collaborated with Dr. Amy O'Connell and Professor Maja Matarić on a haptic-guided breathing study using the Blossom robot platform. The project investigated how physical, tactile cues from a socially assistive robot can guide users through paced breathing exercises in real time. Working on a physical human-robot interaction system highlighted how sensitive real-world performance is to timing, mechanical feedback, and individual user responses. The experience reinforced my focus on building interactive physical systems evaluated by how reliably they support users in practice rather than by isolated technical metrics.</p>
     </li>
     <li>
       <div class="head"><span class="org">California State University, Fullerton</span><span class="when">Aug 2025 – May 2026</span></div>
       <div class="role">Research Assistant, with Anand Panangadan</div>
-      <p class="what">Built a Raspberry Pi 5 module with RGB and thermal cameras and a fusion pipeline that raised cooking-state classification accuracy from 65% to 78%.</p>
-    </li>
+      <p class="what">This project taught me that higher benchmark accuracy does not always mean a safer system in practice. I developed an affordable kitchen safety monitor on a Raspberry Pi 5 that fuses RGB and thermal cameras to handle changing lighting conditions. In our evaluations, early fusion increased classification accuracy from 65% with RGB alone to 78%, leading to a first-author paper at an IEEE workshop.</p>    </li>
   </ul>
 
   <h3>Other Experience &amp; Projects</h3>
